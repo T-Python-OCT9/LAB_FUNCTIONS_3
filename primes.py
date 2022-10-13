@@ -1,5 +1,4 @@
-def find_primes(x:int , y:int) ->list:
-    print("Primes")
+def find_primes(x:int , y:int):
     lst = []
 
     for i in range(x, y + 1):
@@ -9,12 +8,13 @@ def find_primes(x:int , y:int) ->list:
                     break
             else:
                 lst.append(i)
-    return lst
+    
+    for j in lst:
+        print(j)
 
 
 
 num1 = int (input("Enter the first number: "))
 num2 = int (input("Enter the second number: "))
 
-for i in find_primes(num1,num2):
-    print(i)
+find_primes(num1,num2)
