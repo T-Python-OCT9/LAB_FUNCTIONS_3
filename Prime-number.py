@@ -16,7 +16,6 @@ Also , you can think of it as A Prime Number is a number that cannot be made by 
 43   
 47   
 '''
-from bdb import Breakpoint
 
 
 first_num =int(input("please inter the first number:\n"))
@@ -35,8 +34,7 @@ def find_Primes(x, y)->int :
             else:
                 prime_list.append(i)
 
-    #for i in range
-
+ 
     return prime_list
 
 
@@ -53,5 +51,5 @@ def find_Primes2(x,y)->int:
             else:
                 print(i)
 
-print(find_Primes2(first_num,second_num))
+find_Primes2(first_num,second_num)
 print(f"the primes numbers between {first_num} and {second_num} using list are:",find_Primes(first_num,second_num))
