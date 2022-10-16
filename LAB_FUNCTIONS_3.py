@@ -1,14 +1,27 @@
 # LAB LAB_FUNCTIONS_3
 
 
-def find_primes(first: int, second: int) -> int:
-     for number in range(first, second):
-         if number > 1:
-             for R in range(2, number):
-              if number % R == 0:
-                break
-             else:
-               print(number)
+def is_prime(number : int) -> bool:
+    if number <= 1:
+        return False
+
+    for n in range(2, number):
+        if number%n == 0:
+            return False
+    
+    return True
 
 
-find_primes(25, 50)
+
+def find_primes(x:int , y:int) -> list:
+    primes : list = []
+
+    for number in range(x, y + 1):
+        if is_prime(number):
+            primes.append(number)
+    
+    return primes
+
+
+
+print(find_primes(25, 47))
